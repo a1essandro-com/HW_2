@@ -1,0 +1,7 @@
+<h2>Зарегистрироваться</h2>
+<div class="form-group">
+  <input type="text" [(ngModel)]="item.login" class="form-control" placeholder="login"/><br />
+  <input type="password" [(ngModel)]="item.password" class="form-control" placeholder="Password">
+  <br>
+  <button (click)="goToItem(item)" class="btn">Перейти</button>
+</div>
