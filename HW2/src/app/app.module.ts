@@ -10,14 +10,7 @@ import { AboutComponent } from './about/about.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { LoginComponent } from './login/login.component';
 import { AdminComponent } from './admin/admin.component';
-
-const appRoutes: Routes = [
-  {path:'main', component:MainComponent},
-  {path:'about', component:AboutComponent},
-  {path:'login', component:LoginComponent},
-  {path:'admin', component:AdminComponent},
-  {path:'**', component:NotFoundComponent},
-]
+import { ItemComponent } from './item/item.component';
 
 @NgModule({
   declarations: [
@@ -26,13 +19,13 @@ const appRoutes: Routes = [
     AboutComponent,
     NotFoundComponent,
     LoginComponent,
-    AdminComponent
+    AdminComponent,
+    ItemComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule,
-    RouterModule.forRoot(appRoutes)
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
