@@ -16,8 +16,8 @@ export class MainComponent{
   i: string[] = [this.item.city, this.item.country];
   constructor(private router: Router){ }
   goToItem(myItem: Item){
-    var testObject = { 'city': myItem.city, 'country': myItem.country };
-    localStorage.setItem('place', JSON.stringify(testObject));
+    var placeObject = { 'city': myItem.city, 'country': myItem.country };
+    localStorage.setItem('place', JSON.stringify(placeObject));
     this.i = [this.item.city, this.item.country]
   }
 }
