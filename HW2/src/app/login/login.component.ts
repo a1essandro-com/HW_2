@@ -16,19 +16,21 @@ export class LoginComponent {
   item: Item = new Item();
   logina: string = "admin";
   passworda: string = "admin"
-  index: number=0 ;
+  loginf: string = "";
+  passwordf: string = ""
   constructor(private router: Router){ }
   goToItem(myItem: Item){
     if(myItem.login == this.logina && myItem.password == this.passworda){
       location.replace("/admin");
     }
-    else if (this.index == 1){
+    else if (myItem.login == this.loginf && myItem.password == this.passwordf){
       location.replace("/admin");
     }
     else{
       localStorage.setItem('login', JSON.stringify(myItem.login));
       localStorage.setItem('password', JSON.stringify(myItem.password));
-      this.index+=1;
+      this.loginf = myItem.login;
+      this.passwordf = myItem.password;
     }
   }
 }
