@@ -20,6 +20,11 @@ export class MainComponent{
     var placeObject = { 'city': myItem.city, 'country': myItem.country };
     localStorage.setItem('place', JSON.stringify(placeObject));
     //this.i = [this.item.city, this.item.country]
-    this.places.push.apply(myItem.city,myItem.country);
+    this.places.push
+    ({
+    "city": myItem.city,
+    "country": myItem.country
+    })
+    console.log('add')
   }
 }
